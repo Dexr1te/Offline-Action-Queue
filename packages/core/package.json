@@ -1,0 +1,22 @@
+{
+  "name": "@offlineq/core",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Framework-independent OfflineQ Phase 2 core model (processor pending).",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean --out-dir dist",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  }
+}

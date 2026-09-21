@@ -1,0 +1,29 @@
+{
+  "name": "offlineq",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "build": "pnpm --filter './packages/*' build",
+    "format": "prettier --write README.md VISION.md ROADMAP.md CHANGELOG.md CONTRIBUTING.md SECURITY.md SUPPORT.md CODE_OF_CONDUCT.md package.json pnpm-workspace.yaml tsconfig.base.json tsconfig.json vitest.config.ts playwright.config.ts eslint.config.js .prettierrc.json .changeset/config.json packages .github",
+    "format:check": "prettier --check README.md VISION.md ROADMAP.md CHANGELOG.md CONTRIBUTING.md SECURITY.md SUPPORT.md CODE_OF_CONDUCT.md package.json pnpm-workspace.yaml tsconfig.base.json tsconfig.json vitest.config.ts playwright.config.ts eslint.config.js .prettierrc.json .changeset/config.json packages .github",
+    "lint": "eslint packages eslint.config.js vitest.config.ts playwright.config.ts",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --project tsconfig.json --pretty false",
+    "changeset": "changeset",
+    "changeset:status": "changeset status"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "@eslint/js": "^9.38.0",
+    "@playwright/test": "^1.56.1",
+    "eslint": "^9.38.0",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3",
+    "vitest": "^3.2.4"
+  }
+}

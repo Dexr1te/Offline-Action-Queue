@@ -1,0 +1,5 @@
+node_modules
+dist
+pnpm-lock.yaml
+docs
+offlineq-v1.0-spec.md
